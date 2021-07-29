@@ -6,10 +6,16 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Blog</title>
+  <!-- <link rel='stylesheet' href="./css/header.css">
+  <link rel='stylesheet' href="./css/footer.css"> -->
+  <%- include('_header_css') -%>
+  <%- include('_footer_css') -%>
 </head>
 <body>
+  <%- include('_header') %>
   <div class="container">
-    <h1 class="mb-4">Blog Articles</h1>
+    <!-- <h1 class="mb-4"><nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">Blog Articles</nav></h1> -->
+    
     <a href="/articles/new" class="btn btn-success">New Article</a>
 
     <% articles.forEach(article => { %>
@@ -29,5 +35,6 @@
       </div>
     <% }) %>
   </div>
+  <%- include('_footer') -%>
 </body>
 </html>

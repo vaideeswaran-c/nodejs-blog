@@ -5,9 +5,13 @@ const articleRouter = require('./routes/articles')
 const methodOverride = require('method-override')
 const app = express()
 
-mongoose.connect('mongodb://localhost/blog', {
-  useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
-})
+// mongoose.connect('mongodb://localhost/blog', {
+//   useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
+// })
+
+const uri = "mongodb+srv://m001-student:m001-mongodb-basics@sandbox.naesn.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+
+mongoose.connect(uri,{ useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })
 
 app.set('view engine', 'ejs')
 app.use(express.urlencoded({ extended: false }))

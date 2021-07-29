@@ -13,6 +13,10 @@ const articleSchema = new mongoose.Schema({
   description: {
     type: String
   },
+  blogImg: {
+    type: Image,
+    required: true
+  },
   markdown: {
     type: String,
     required: true
